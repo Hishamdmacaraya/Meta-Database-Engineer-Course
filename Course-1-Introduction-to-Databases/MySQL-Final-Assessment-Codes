@@ -1,1 +1,41 @@
+CREATE DATABASE SportsClub;
+
+USE SportsClub;
+
+CREATE TABLE Players (playerID INT, playerName VARCHAR(50), age INT, PRIMARY KEY(playerID));
+INSERT INTO Players (playerID, playerName, age) VALUES (1, "Jack", 25);
+INSERT INTO Players (playerID, playerName, age) 
+VALUES 
+(2, "KARL", 20),
+(3, "Mark", 21),
+(4, "Andrew", 22);
+
+/* Write a SQL statement that outputs all players names in the "Players" table. When you run the right SQL query, you should have the following output result: */
+SELECT playerName FROM Players;
+
+/* Question 6
+The following table called "Players", contains four records of data. Write a SQL statement that updates the age of the player with ID = 3. The new age value should be '22'. */
+UPDATE Players
+SET age = 22
+WHERE playerID = 4;
+
+/* The following table called "Players", contains four records of data. Write a SQL statement that deletes the record of the player with ID = 4. */
+DELETE
+FROM Players
+WHERE playerID = 4;
+
+/* Write an SQL statement that evaluates if the PlayerID in the following "Players" table is odd or even. */
+SELECT PlayerID % 2
+FROM Players;
+
+/* Write an SQL statement that outputs all names of the players in the following "Players" table who are older than 25 years of age. */
+SELECT age, PlayerName
+FROM Players
+WHERE age > 25;
+
+/* The following table called "Players", contains four records of data. Write a SQL statement that deletes the record of the player with ID = 4. */
+DELETE FROM Players 
+WHERE playerID = 4;
+
+
 
